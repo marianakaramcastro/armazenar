@@ -1,269 +1,513 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description" content="Mundo dos Doces: receitas deliciosas e fáceis de preparar, com listas interativas de ingredientes.">
+    <title>Mundo dos Doces</title>
     <link rel="stylesheet" href="style.css">
+    <script>
+        document.documentElement.classList.add("js");
+    </script>
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <header>
-    <a href="https://www.youtube.com/watch?v=rG1osb8STH0">vídeo receita mousse de chocolate</a></header>
-    
-    <h1>Mundo dos doces!</h1>
-    <p>Bem-vindo ao Mundo dos Doces! Este site foi criado para compartilhar receitas deliciosas e fáceis de fazer, como brigadeiro, brownie, beijinho e outras sobremesas. Aqui, você poderá conhecer diferentes doces e aprender como prepará-los de forma simples e saborosa.</p>
-    
-    <h1>Receitas</h1>
-    
-    <h2>Beijinho</h2>
-    <img class="amarelo"src="receita-de-beijinho-2.jpg">
-    <h3>ingredientes</h3>
-    <p> <ul>1 lata de leite condesando (395g)</ul>
-<ul>1 colher (sopa) de manteiga</ul>
-<ul>100 g de coco ralado (fresco ou seco) </ul>
-<ul>Açúcar cristal ou coco ralado para enrolar</ul>
-<ul>Cravos-da-índia para decorar (opcional)</ul></p>
+    <header class="site-header">
+        <a href="https://www.youtube.com/watch?v=rG1osb8STH0"
+           target="_blank"
+           rel="noopener noreferrer">
+            Vídeo receita mousse de chocolate
+        </a>
+    </header>
 
-<h3>Modo de preparo</h3>
-<p>Em uma panela, coloque o leite condensado, a manteiga e o coco ralado.
-Misture bem e cozinhe em fogo baixo, mexendo sempre.
-Quando a massa desgrudar do fundo da panela (ponto de brigadeiro), desligue o fogo.
-Transfira para um prato untado com manteiga e deixe esfriar completamente.
-Unte as mãos, faça bolinhas e passe no açúcar cristal ou no coco ralado.
-Decore cada beijinho com um cravo-da-índia, se desejar.
+    <main class="container">
+        <section class="intro">
+            <h1>Mundo dos Doces!</h1>
+            <p>
+                Bem-vindo ao Mundo dos Doces! Este site foi criado para compartilhar
+                receitas deliciosas e fáceis de fazer, como brigadeiro, brownie,
+                beijinho e outras sobremesas. Aqui, você poderá conhecer diferentes
+                doces e aprender como prepará-los de forma simples e saborosa.
+            </p>
+        </section>
 
-<ul>Rendimento: cerca de 20 a 25 beijinhos.</ul></p>
+        <h2 class="section-title">Receitas</h2>
 
-<h2>Brigadeiro</h2>
-<img class="azul"src="1a884bcbc5b04d71476d2995d51d0140.jpg">
-<h3>Ingredientes</h3>
-<p> <ul>1 lata de leite condensado (935 g)</ul>
-<ul>1 colher (sopa) de manteiga </ul>
-<ul>4 colheres (sopa) de chocolate em pó (ou achocolatado se preferir mais doce)</ul>
-<ul>Chocolate granulado para enrolar</ul></p>
+        <!-- BEIJINHO -->
+        <article class="recipe-card" id="beijinho">
+            <h2>Beijinho</h2>
+            <img class="amarelo" src="receita-de-beijinho-2.jpg"
+                 alt="Beijinhos de coco" loading="lazy">
 
-<h3>Modo de preparo</h3>
-<p>Em uma panela, misture o leite condensado, a manteiga e o chocolate em pó.
-Cozinhe em fogo baixo, mexendo sempre, até que a mistura engrosse e comece a desgrudar do fundo da panela (ponto de brigadeiro).
-Transfira para um prato untado com manteiga e deixe esfriar completamente.
-Unte as mãos com manteiga, faça bolinhas e passe no chocolate granulado.
+            <section class="ingredients">
+                <h3>Ingredientes</h3>
+                <ul class="ingredient-list">
+                    <li><label><input type="checkbox"> 1 lata de leite condensado (395g)</label></li>
+                    <li><label><input type="checkbox"> 1 colher (sopa) de manteiga</label></li>
+                    <li><label><input type="checkbox"> 100 g de coco ralado (fresco ou seco)</label></li>
+                    <li><label><input type="checkbox"> Açúcar cristal ou coco ralado para enrolar</label></li>
+                    <li><label><input type="checkbox"> Cravos-da-índia para decorar (opcional)</label></li>
+                </ul>
+                <div class="ingredient-progress" aria-live="polite">0 de 5 ingredientes separados</div>
+                <button class="reset-button" type="button">Desmarcar todos</button>
+            </section>
 
-<ul>Rendimento: cerca de 20 a 25 brigadeiros</ul></p>
+            <h3>Modo de preparo</h3>
+            <p>
+                Em uma panela, coloque o leite condensado, a manteiga e o coco ralado.
+                Misture bem e cozinhe em fogo baixo, mexendo sempre.
+                Quando a massa desgrudar do fundo da panela (ponto de brigadeiro),
+                desligue o fogo.
+                Transfira para um prato untado com manteiga e deixe esfriar completamente.
+                Unte as mãos, faça bolinhas e passe no açúcar cristal ou no coco ralado.
+                Decore cada beijinho com um cravo-da-índia, se desejar.
+            </p>
+            <p class="recipe-note">Rendimento: cerca de 20 a 25 beijinhos.</p>
+        </article>
 
-<h2>Brownie</h2>
-<img class="roxo"src="IAXF2PJPAJFSXO5E65SZ2XX4MY.jpg">
-<h3>Ingredientes</h3>
-<p><ul>200g de chocolate meio amargo</ul>
-<ul>140g de manteiga</ul>
-<ul>3 ovos</ul>
-<ul>1 xícara (200g) de açúcar</ul>
-<ul>1 colher (chá) de essência de baunilha (opcional)</ul>
-<ul>¾ de xícara (95 g) de farinha de trigo</ul>
-<ul> pitada de sal</ul>
-<ul>½ xícara de nozes ou castanhas picadas (opcional)</ul></p>
+        <!-- BRIGADEIRO -->
+        <article class="recipe-card" id="brigadeiro">
+            <h2>Brigadeiro</h2>
+            <img class="azul" src="1a884bcbc5b04d71476d2995d51d0140.jpg"
+                 alt="Brigadeiros cobertos com granulado" loading="lazy">
 
-<h3>Modo de Preparo</h3>
-<p>Preaqueça o forno a 180°C.
-Derreta o chocolate e a manteiga juntos, mexendo até obter uma mistura homogênea.
-Em outra tigela, bata os ovos com o açúcar até misturar bem.
-Adicione o chocolate derretido e a baunilha.
-Incorpore a farinha e o sal, mexendo apenas até a massa ficar uniforme.
-Acrescente as nozes ou castanhas, se desejar.
-Despeje a massa em uma forma quadrada (aprox. 20 por 20 cm) untada ou forrada com papel-manteiga.
-Asse por 25 a 30 minutos. O centro deve permanecer levemente úmido.
-Deixe esfriar antes de cortar em quadrados.
+            <section class="ingredients">
+                <h3>Ingredientes</h3>
+                <ul class="ingredient-list">
+                    <li><label><input type="checkbox"> 1 lata de leite condensado (935 g)</label></li>
+                    <li><label><input type="checkbox"> 1 colher (sopa) de manteiga</label></li>
+                    <li><label><input type="checkbox"> 4 colheres (sopa) de chocolate em pó (ou achocolatado se preferir mais doce)</label></li>
+                    <li><label><input type="checkbox"> Chocolate granulado para enrolar</label></li>
+                </ul>
+                <div class="ingredient-progress" aria-live="polite">0 de 4 ingredientes separados</div>
+                <button class="reset-button" type="button">Desmarcar todos</button>
+            </section>
 
-Dica: Para um brownie mais cremoso, asse por menos tempo. Para um brownie mais firme e parecido com bolo, deixe alguns minutos a mais no forno.</p>
+            <h3>Modo de preparo</h3>
+            <p>
+                Em uma panela, misture o leite condensado, a manteiga e o chocolate em pó.
+                Cozinhe em fogo baixo, mexendo sempre, até que a mistura engrosse e comece
+                a desgrudar do fundo da panela (ponto de brigadeiro).
+                Transfira para um prato untado com manteiga e deixe esfriar completamente.
+                Unte as mãos com manteiga, faça bolinhas e passe no chocolate granulado.
+            </p>
+            <p class="recipe-note">Rendimento: cerca de 20 a 25 brigadeiros</p>
+        </article>
 
-<h2>Arroz Doce</h2>
-<img class="branco"src="arroz_doce_tradicional_portugues_6608_600.jpg">
-<h3>Ingredientes</h3>
-<p> <ul>1 xícara de arroz</ul>
-<ul>2 xícaras de água</ul>
-<ul>1 litro de leite</ul>
-<ul>1 lata de leite condensado (395 g)</ul>
-<ul>1 canela em pau</ul>
-<ul>3 cravos-da-índia (opcional)</ul>
-<ul>Canela em pó para polvilhar</ul><p>
+        <!-- BROWNIE -->
+        <article class="recipe-card" id="brownie">
+            <h2>Brownie</h2>
+            <img class="roxo" src="IAXF2PJPAJFSXO5E65SZ2XX4MY.jpg"
+                 alt="Brownie de chocolate" loading="lazy">
 
-<h3>Modo de preparo</h3>
-<p>Lave o arroz e coloque-o em uma panela com a água, a canela em pau e os cravos.
-Cozinhe até a água secar quase completamente.
-Adicione o leite e cozinhe em fogo baixo, mexendo de vez em quando.
-Quando o arroz estiver bem macio, acrescente o leite condensado.
-Cozinhe por mais 10 a 15 minutos, mexendo para não grudar no fundo da panela.
-Retire a canela em pau e os cravos.
-Sirva quente ou gelado, polvilhado com canela em pó.
+            <section class="ingredients">
+                <h3>Ingredientes</h3>
+                <ul class="ingredient-list">
+                    <li><label><input type="checkbox"> 200g de chocolate meio amargo</label></li>
+                    <li><label><input type="checkbox"> 140g de manteiga</label></li>
+                    <li><label><input type="checkbox"> 3 ovos</label></li>
+                    <li><label><input type="checkbox"> 1 xícara (200g) de açúcar</label></li>
+                    <li><label><input type="checkbox"> 1 colher (chá) de essência de baunilha (opcional)</label></li>
+                    <li><label><input type="checkbox"> ¾ de xícara (95 g) de farinha de trigo</label></li>
+                    <li><label><input type="checkbox"> 1 pitada de sal</label></li>
+                    <li><label><input type="checkbox"> ½ xícara de nozes ou castanhas picadas (opcional)</label></li>
+                </ul>
+                <div class="ingredient-progress" aria-live="polite">0 de 8 ingredientes separados</div>
+                <button class="reset-button" type="button">Desmarcar todos</button>
+            </section>
 
-<ul>Rendimento: cerca de 6 porções</ul></p>
+            <h3>Modo de Preparo</h3>
+            <p>
+                Preaqueça o forno a 180°C.
+                Derreta o chocolate e a manteiga juntos, mexendo até obter uma mistura homogênea.
+                Em outra tigela, bata os ovos com o açúcar até misturar bem.
+                Adicione o chocolate derretido e a baunilha.
+                Incorpore a farinha e o sal, mexendo apenas até a massa ficar uniforme.
+                Acrescente as nozes ou castanhas, se desejar.
+                Despeje a massa em uma forma quadrada (aprox. 20 por 20 cm) untada ou
+                forrada com papel-manteiga.
+                Asse por 25 a 30 minutos. O centro deve permanecer levemente úmido.
+                Deixe esfriar antes de cortar em quadrados.
+            </p>
+            <p class="recipe-note">
+                Dica: Para um brownie mais cremoso, asse por menos tempo.
+                Para um brownie mais firme e parecido com bolo, deixe alguns minutos a mais no forno.
+            </p>
+        </article>
 
-<h2>Mousse de Maracujá</h2>
-<img class="preto"src="mousse-de-maracuja-1612.jpg">
-<h3>Ingredientes</h3>
-<p><ul>1 lata de leite condensado (395g)</ul>
-<ul>1 lata de creme de leite (300 g)</ul>
-<ul>200 ml de suco concentrado de maracujá (ou polpa sem sementes)</ul></p>
+        <!-- ARROZ DOCE -->
+        <article class="recipe-card" id="arroz-doce">
+            <h2>Arroz Doce</h2>
+            <img class="branco" src="arroz_doce_tradicional_portugues_6608_600.jpg"
+                 alt="Arroz doce com canela" loading="lazy">
 
-<h3>Modo de preparo</h3>
-<p>Coloque o leite condensado, o creme de leite e o suco de maracujá no liquidificador.
-Bata por 2 a 3 minutos até obter um creme homogêneo.
-Distribua em taças ou em uma travessa.
-Leve à geladeira por pelo menos 2 horas.</p>
+            <section class="ingredients">
+                <h3>Ingredientes</h3>
+                <ul class="ingredient-list">
+                    <li><label><input type="checkbox"> 1 xícara de arroz</label></li>
+                    <li><label><input type="checkbox"> 2 xícaras de água</label></li>
+                    <li><label><input type="checkbox"> 1 litro de leite</label></li>
+                    <li><label><input type="checkbox"> 1 lata de leite condensado (395 g)</label></li>
+                    <li><label><input type="checkbox"> 1 canela em pau</label></li>
+                    <li><label><input type="checkbox"> 3 cravos-da-índia (opcional)</label></li>
+                    <li><label><input type="checkbox"> Canela em pó para polvilhar</label></li>
+                </ul>
+                <div class="ingredient-progress" aria-live="polite">0 de 7 ingredientes separados</div>
+                <button class="reset-button" type="button">Desmarcar todos</button>
+            </section>
 
-<h3>Cobertura (opcional)</h3>
-<p><ul>Polpa de 1 maracujá</ul>
-<ul>2 colheres (sopa) de açúcar</ul>
-<ul>2 colheres (sopa) de água</ul></p>
+            <h3>Modo de preparo</h3>
+            <p>
+                Lave o arroz e coloque-o em uma panela com a água, a canela em pau e os cravos.
+                Cozinhe até a água secar quase completamente.
+                Adicione o leite e cozinhe em fogo baixo, mexendo de vez em quando.
+                Quando o arroz estiver bem macio, acrescente o leite condensado.
+                Cozinhe por mais 10 a 15 minutos, mexendo para não grudar no fundo da panela.
+                Retire a canela em pau e os cravos.
+                Sirva quente ou gelado, polvilhado com canela em pó.
+            </p>
+            <p class="recipe-note">Rendimento: cerca de 6 porções</p>
+        </article>
 
-<h2>Nega Maluca(ou bolo de chocolate)</h2>
-<img class="vermelho"src="usuario-4135-a29ec17d217161cf28115becef4b1335.jpg">
-<h3>Ingredientes</h3>
-<p><ul>4 ovos</ul>
-<ul>2 xícaras (chá) de açúcar</ul>
-<ul>1 xícara (chá) de leite</ul>
-<ul>1 xícara (chá) de óleo</ul>
-<ul>2 xícaras (chá) de farinha de trigo</ul>
-<ul>1 xícara (chá) de chocolate em pó</ul>
-<ul>1 colher (sopa) de fermento em pó</ul>
+        <!-- MOUSSE DE MARACUJÁ -->
+        <article class="recipe-card" id="mousse-maracuja">
+            <h2>Mousse de Maracujá</h2>
+            <img class="preto" src="mousse-de-maracuja-1612.jpg"
+                 alt="Mousse de maracujá" loading="lazy">
 
-<h3>Cobertura</h3>
+            <section class="ingredients">
+                <h3>Ingredientes</h3>
+                <ul class="ingredient-list">
+                    <li><label><input type="checkbox"> 1 lata de leite condensado (395g)</label></li>
+                    <li><label><input type="checkbox"> 1 lata de creme de leite (300 g)</label></li>
+                    <li><label><input type="checkbox"> 200 ml de suco concentrado de maracujá (ou polpa sem sementes)</label></li>
+                </ul>
+                <div class="ingredient-progress" aria-live="polite">0 de 3 ingredientes separados</div>
+                <button class="reset-button" type="button">Desmarcar todos</button>
+            </section>
 
-<ul>1 xícara (chá) de açúcar</ul>
-<ul>3 colheres (sopa) de chocolate em pó</ul>
-<ul>2 colheres (sopa) de manteiga</ul>
-<ul>1/2 xícara (chá) de leite</ul></p>
+            <h3>Modo de preparo</h3>
+            <p>
+                Coloque o leite condensado, o creme de leite e o suco de maracujá no liquidificador.
+                Bata por 2 a 3 minutos até obter um creme homogêneo.
+                Distribua em taças ou em uma travessa.
+                Leve à geladeira por pelo menos 2 horas.
+            </p>
 
-<h3>Modo de preparo</h3>
-<p>Preaqueça o forno a 180°C e unte uma forma média com manteiga e farinha.
-No liquidificador, bata os ovos, o açúcar, o leite e o óleo até obter uma mistura homogênea.
-Transfira para uma tigela e adicione a farinha, o chocolate e o fermento, misturando delicadamente.
-Despeje na forma e leve ao forno por 35–40 minutos, ou até o palito sair limpo.</p>
+            <h3>Cobertura (opcional)</h3>
+            <section class="ingredients">
+                <ul class="ingredient-list">
+                    <li><label><input type="checkbox"> Polpa de 1 maracujá</label></li>
+                    <li><label><input type="checkbox"> 2 colheres (sopa) de açúcar</label></li>
+                    <li><label><input type="checkbox"> 2 colheres (sopa) de água</label></li>
+                </ul>
+                <div class="ingredient-progress" aria-live="polite">0 de 3 ingredientes separados</div>
+                <button class="reset-button" type="button">Desmarcar todos</button>
+            </section>
+        </article>
 
-<h3>Cobertura</h3>
-<p>Misture os ingredientes em uma panela.
-Leve ao fogo baixo, mexendo sempre, até formar uma calda cremosa.
-Despeje sobre o bolo ainda morno.</p>
+        <!-- NEGA MALUCA -->
+        <article class="recipe-card" id="nega-maluca">
+            <h2>Nega Maluca (ou bolo de chocolate)</h2>
+            <img class="vermelho" src="usuario-4135-a29ec17d217161cf28115becef4b1335.jpg"
+                 alt="Bolo de chocolate" loading="lazy">
 
-<h2>Pudim de Leite Condensado</h2>
-<img class="bege"src="img-pudim.jpg">
-<h3>Ingredientes</h3>
-<p>Calda
+            <section class="ingredients">
+                <h3>Ingredientes</h3>
+                <ul class="ingredient-list">
+                    <li><label><input type="checkbox"> 4 ovos</label></li>
+                    <li><label><input type="checkbox"> 2 xícaras (chá) de açúcar</label></li>
+                    <li><label><input type="checkbox"> 1 xícara (chá) de leite</label></li>
+                    <li><label><input type="checkbox"> 1 xícara (chá) de óleo</label></li>
+                    <li><label><input type="checkbox"> 2 xícaras (chá) de farinha de trigo</label></li>
+                    <li><label><input type="checkbox"> 1 xícara (chá) de chocolate em pó</label></li>
+                    <li><label><input type="checkbox"> 1 colher (sopa) de fermento em pó</label></li>
+                </ul>
+                <div class="ingredient-progress" aria-live="polite">0 de 7 ingredientes separados</div>
+                <button class="reset-button" type="button">Desmarcar todos</button>
 
-<ul>1 xícara (chá) de açúcar</ul>
-<ul>1/2 xícara (chá) de água quente</ul>
+                <h3>Cobertura</h3>
+                <ul class="ingredient-list">
+                    <li><label><input type="checkbox"> 1 xícara (chá) de açúcar</label></li>
+                    <li><label><input type="checkbox"> 3 colheres (sopa) de chocolate em pó</label></li>
+                    <li><label><input type="checkbox"> 2 colheres (sopa) de manteiga</label></li>
+                    <li><label><input type="checkbox"> 1/2 xícara (chá) de leite</label></li>
+                </ul>
+                <div class="ingredient-progress" aria-live="polite">0 de 4 ingredientes separados</div>
+                <button class="reset-button" type="button">Desmarcar todos</button>
+            </section>
 
-Pudim
+            <h3>Modo de preparo</h3>
+            <p>
+                Preaqueça o forno a 180°C e unte uma forma média com manteiga e farinha.
+                No liquidificador, bata os ovos, o açúcar, o leite e o óleo até obter uma
+                mistura homogênea.
+                Transfira para uma tigela e adicione a farinha, o chocolate e o fermento,
+                misturando delicadamente.
+                Despeje na forma e leve ao forno por 35–40 minutos, ou até o palito sair limpo.
+            </p>
 
-<ul>1 lata de leite condensado (395 g)</ul>
-<ul>2 medidas da lata de leite</ul>
-<ul>3 ovos</ul></p>
+            <h3>Cobertura</h3>
+            <p>
+                Misture os ingredientes em uma panela.
+                Leve ao fogo baixo, mexendo sempre, até formar uma calda cremosa.
+                Despeje sobre o bolo ainda morno.
+            </p>
+        </article>
 
-<h3>Modo de preparo</h3>
-<p>
-Faça a calda
-Coloque o açúcar em uma forma própria para pudim.
-Leve ao fogo baixo até derreter e formar um caramelo dourado.
-Adicione a água quente com cuidado e mexa até dissolver os torrões.
-Espalhe a calda pelo fundo e pelas laterais da forma.
-Prepare o pudim
-Bata no liquidificador o leite condensado, o leite e os ovos por cerca de 1 minuto.
-Despeje a mistura na forma caramelizada.
-Asse em banho-maria
-Cubra a forma com papel-alumínio.
-Coloque-a dentro de uma assadeira com água quente.
-Asse em forno preaquecido a 180 °C por aproximadamente 1 hora e 20 minutos, ou até firmar.
-Geladeira
-Deixe esfriar.
-Leve à geladeira por pelo menos 4 horas (de preferência de um dia para o outro).
-Desenforme e sirva.
+        <!-- PUDIM -->
+        <article class="recipe-card" id="pudim">
+            <h2>Pudim de Leite Condensado</h2>
+            <img class="bege" src="img-pudim.jpg"
+                 alt="Pudim de leite condensado com calda de caramelo" loading="lazy">
 
-<ul>Dica: Para um pudim mais lisinho, passe a mistura por uma peneira antes de colocar na forma.</ul></p>
+            <section class="ingredients">
+                <h3>Ingredientes — Calda</h3>
+                <ul class="ingredient-list">
+                    <li><label><input type="checkbox"> 1 xícara (chá) de açúcar</label></li>
+                    <li><label><input type="checkbox"> 1/2 xícara (chá) de água quente</label></li>
+                </ul>
+                <div class="ingredient-progress" aria-live="polite">0 de 2 ingredientes separados</div>
+                <button class="reset-button" type="button">Desmarcar todos</button>
 
-<h2>Mousse de Chocolate</h2>
-<img class="verde"src="images.jpeg">
-<h3>Ingredientes</h3>
-<p><ul>200 g de chocolate meio amargo picado</ul>
-<ul>1 caixa de creme de leite (200 g)</ul>
-<ul>3 claras de ovo</ul>
-<ul>3 colheres (sopa) de açúcar</ul></p>
+                <h3>Ingredientes — Pudim</h3>
+                <ul class="ingredient-list">
+                    <li><label><input type="checkbox"> 1 lata de leite condensado (395 g)</label></li>
+                    <li><label><input type="checkbox"> 2 medidas da lata de leite</label></li>
+                    <li><label><input type="checkbox"> 3 ovos</label></li>
+                </ul>
+                <div class="ingredient-progress" aria-live="polite">0 de 3 ingredientes separados</div>
+                <button class="reset-button" type="button">Desmarcar todos</button>
+            </section>
 
-<h3>Modo de preparo</h3>
-<p><ul>Derreta o chocolate em banho-maria ou no micro-ondas.</ul>
-<ul>Misture o creme de leite ao chocolate derretido até formar um creme liso.</ul>
-<ul>Bata as claras em neve.</ul>
-<ul>Adicione o açúcar aos poucos e continue batendo até obter um merengue firme.</ul>
-<ul>Incorpore delicadamente o merengue ao creme de chocolate, mexendo de baixo para cima.</ul>
-<ul>Distribua em taças e leve à geladeira por pelo menos 3 horas.</ul></p>
+            <h3>Modo de preparo</h3>
+            <p>
+                Faça a calda
+                Coloque o açúcar em uma forma própria para pudim.
+                Leve ao fogo baixo até derreter e formar um caramelo dourado.
+                Adicione a água quente com cuidado e mexa até dissolver os torrões.
+                Espalhe a calda pelo fundo e pelas laterais da forma.
+            </p>
+            <p>
+                Prepare o pudim
+                Bata no liquidificador o leite condensado, o leite e os ovos por cerca de 1 minuto.
+                Despeje a mistura na forma caramelizada.
+            </p>
+            <p>
+                Asse em banho-maria
+                Cubra a forma com papel-alumínio.
+                Coloque-a dentro de uma assadeira com água quente.
+                Asse em forno preaquecido a 180 °C por aproximadamente 1 hora e 20 minutos,
+                ou até firmar.
+            </p>
+            <p>
+                Geladeira
+                Deixe esfriar.
+                Leve à geladeira por pelo menos 4 horas (de preferência de um dia para o outro).
+                Desenforme e sirva.
+            </p>
+            <p class="recipe-note">
+                Dica: Para um pudim mais lisinho, passe a mistura por uma peneira antes de colocar na forma.
+            </p>
+        </article>
 
-<h3>Versão Rápida (3 ingredientes)</h3>
-<p>1 lata de leite condensado
-1 caixa de creme de leite
-200 g de chocolate meio amargo derretido
+        <!-- MOUSSE DE CHOCOLATE -->
+        <article class="recipe-card" id="mousse-chocolate">
+            <h2>Mousse de Chocolate</h2>
+            <img class="verde" src="images.jpeg"
+                 alt="Mousse de chocolate" loading="lazy">
 
-Bata tudo no liquidificador até ficar homogêneo e leve à geladeira por 2 horas.</p>
+            <section class="ingredients">
+                <h3>Ingredientes</h3>
+                <ul class="ingredient-list">
+                    <li><label><input type="checkbox"> 200 g de chocolate meio amargo picado</label></li>
+                    <li><label><input type="checkbox"> 1 caixa de creme de leite (200 g)</label></li>
+                    <li><label><input type="checkbox"> 3 claras de ovo</label></li>
+                    <li><label><input type="checkbox"> 3 colheres (sopa) de açúcar</label></li>
+                </ul>
+                <div class="ingredient-progress" aria-live="polite">0 de 4 ingredientes separados</div>
+                <button class="reset-button" type="button">Desmarcar todos</button>
+            </section>
 
-<h2>Romeu e Julieta gelado</h2>
-<img src="Mousse-Romeu-e-Julieta_banner.jpg">
-<h3>Ingredientes</h3>
-<p><ul>250 g de queijo minas frescal ou ricota firme</ul>
-1 lata de leite condensado</ul>
-1 caixinha de creme de leite (200 g)</ul>
-200 g de goiabada em pedaços</ul>
-<ul></ul>1/2 xícara (chá) de leite (se necessário para bater o creme)</p></ul>
+            <h3>Modo de preparo</h3>
+            <ul class="preparation-list">
+                <li>Derreta o chocolate em banho-maria ou no micro-ondas.</li>
+                <li>Misture o creme de leite ao chocolate derretido até formar um creme liso.</li>
+                <li>Bata as claras em neve.</li>
+                <li>Adicione o açúcar aos poucos e continue batendo até obter um merengue firme.</li>
+                <li>Incorpore delicadamente o merengue ao creme de chocolate, mexendo de baixo para cima.</li>
+                <li>Distribua em taças e leve à geladeira por pelo menos 3 horas.</li>
+            </ul>
 
-<p>Modo de Preparo
-Prepare o creme de queijo:
-Bata no liquidificador o queijo, o leite condensado e o creme de leite até formar um creme liso. Se necessário, adicione um pouco de leite para ajudar a bater.
-Monte a sobremesa:
-Em um refratário ou em taças individuais, alterne camadas de creme de queijo e pedaços de goiabada.
-Leve à geladeira:
-Deixe por pelo menos 2 a 3 horas para firmar e ficar bem geladinho.
-Opcional:
-Pode decorar com lascas de goiabada ou queijo ralado por cima antes de servir.</p>
-<h2>Morango do Amor</h2>
-<img src="como-vender-morango-do-amor.jpg">
-<p>Ingredientes
+            <h3>Versão Rápida (3 ingredientes)</h3>
+            <section class="ingredients">
+                <ul class="ingredient-list">
+                    <li><label><input type="checkbox"> 1 lata de leite condensado</label></li>
+                    <li><label><input type="checkbox"> 1 caixa de creme de leite</label></li>
+                    <li><label><input type="checkbox"> 200 g de chocolate meio amargo derretido</label></li>
+                </ul>
+                <div class="ingredient-progress" aria-live="polite">0 de 3 ingredientes separados</div>
+                <button class="reset-button" type="button">Desmarcar todos</button>
+            </section>
+            <p>
+                Bata tudo no liquidificador até ficar homogêneo e leve à geladeira por 2 horas.
+            </p>
+        </article>
 
-Para os morangos:
+        <!-- ROMEU E JULIETA -->
+        <article class="recipe-card" id="romeu-julieta">
+            <h2>Romeu e Julieta gelado</h2>
+            <img src="Mousse-Romeu-e-Julieta_banner.jpg"
+                 alt="Sobremesa gelada Romeu e Julieta" loading="lazy">
 
-12 morangos grandes e firmes
-12 palitos de churrasco ou de pirulito
+            <section class="ingredients">
+                <h3>Ingredientes</h3>
+                <ul class="ingredient-list">
+                    <li><label><input type="checkbox"> 250 g de queijo minas frescal ou ricota firme</label></li>
+                    <li><label><input type="checkbox"> 1 lata de leite condensado</label></li>
+                    <li><label><input type="checkbox"> 1 caixinha de creme de leite (200 g)</label></li>
+                    <li><label><input type="checkbox"> 200 g de goiabada em pedaços</label></li>
+                    <li><label><input type="checkbox"> 1/2 xícara (chá) de leite (se necessário para bater o creme)</label></li>
+                </ul>
+                <div class="ingredient-progress" aria-live="polite">0 de 5 ingredientes separados</div>
+                <button class="reset-button" type="button">Desmarcar todos</button>
+            </section>
 
-Para o brigadeiro branco:
+            <h3>Modo de Preparo</h3>
+            <p>
+                Prepare o creme de queijo:
+                Bata no liquidificador o queijo, o leite condensado e o creme de leite até
+                formar um creme liso. Se necessário, adicione um pouco de leite para ajudar a bater.
+            </p>
+            <p>
+                Monte a sobremesa:
+                Em um refratário ou em taças individuais, alterne camadas de creme de queijo
+                e pedaços de goiabada.
+            </p>
+            <p>
+                Leve à geladeira:
+                Deixe por pelo menos 2 a 3 horas para firmar e ficar bem geladinho.
+            </p>
+            <p>
+                Opcional:
+                Pode decorar com lascas de goiabada ou queijo ralado por cima antes de servir.
+            </p>
+        </article>
 
-1 lata de leite condensado (395 g)
-1 colher (sopa) de manteiga
-4 colheres (sopa) de leite em pó (opcional)
+        <!-- MORANGO DO AMOR -->
+        <article class="recipe-card" id="morango-amor">
+            <h2>Morango do Amor</h2>
+            <img src="como-vender-morango-do-amor.jpg"
+                 alt="Morangos do amor com cobertura vermelha" loading="lazy">
 
-Para a calda vermelha:
+            <section class="ingredients">
+                <h3>Ingredientes — Para os morangos</h3>
+                <ul class="ingredient-list">
+                    <li><label><input type="checkbox"> 12 morangos grandes e firmes</label></li>
+                    <li><label><input type="checkbox"> 12 palitos de churrasco ou de pirulito</label></li>
+                </ul>
+                <div class="ingredient-progress" aria-live="polite">0 de 2 ingredientes separados</div>
+                <button class="reset-button" type="button">Desmarcar todos</button>
 
-2 xícaras (chá) de açúcar
-1 xícara (chá) de água
-1 colher (sopa) de vinagre branco
-Corante alimentício vermelho</p>
+                <h3>Ingredientes — Para o brigadeiro branco</h3>
+                <ul class="ingredient-list">
+                    <li><label><input type="checkbox"> 1 lata de leite condensado (395 g)</label></li>
+                    <li><label><input type="checkbox"> 1 colher (sopa) de manteiga</label></li>
+                    <li><label><input type="checkbox"> 4 colheres (sopa) de leite em pó (opcional)</label></li>
+                </ul>
+                <div class="ingredient-progress" aria-live="polite">0 de 3 ingredientes separados</div>
+                <button class="reset-button" type="button">Desmarcar todos</button>
 
-<p>Modo de preparo
-Prepare os morangos
-Lave bem os morangos e seque completamente.
-Espete cada morango em um palito.
-Faça o brigadeiro branco
-Em uma panela, misture o leite condensado, a manteiga e o leite em pó.
-Cozinhe em fogo baixo, mexendo sempre, até desgrudar do fundo da panela.
-Deixe esfriar completamente.
-Envolva os morangos
-Com as mãos levemente untadas, cubra cada morango com uma camada fina de brigadeiro branco.
-Coloque sobre papel-manteiga e leve à geladeira por cerca de 20 minutos.
-Prepare a calda
-Misture açúcar, água, vinagre e algumas gotas de corante vermelho.
-Cozinhe sem mexer até atingir o ponto de bala dura (aproximadamente 145–150°C). Se não tiver termômetro, pingue um pouco da calda em água fria: ela deve endurecer imediatamente e quebrar ao morder.
-Banhe os morangos
-Mergulhe rapidamente cada morango na calda.
-Escorra o excesso e coloque sobre papel-manteiga untado ou tapete de silicone.
-Espere secar
-Em poucos minutos a casquinha ficará dura e brilhante.
-Dicas importantes
-Os morangos precisam estar totalmente secos, senão a calda pode não aderir.
-Trabalhe rápido após a calda atingir o ponto.
-Evite guardar na geladeira por muito tempo, pois a umidade pode amolecer a casquinha.</p>
+                <h3>Ingredientes — Para a calda vermelha</h3>
+                <ul class="ingredient-list">
+                    <li><label><input type="checkbox"> 2 xícaras (chá) de açúcar</label></li>
+                    <li><label><input type="checkbox"> 1 xícara (chá) de água</label></li>
+                    <li><label><input type="checkbox"> 1 colher (sopa) de vinagre branco</label></li>
+                    <li><label><input type="checkbox"> Corante alimentício vermelho</label></li>
+                </ul>
+                <div class="ingredient-progress" aria-live="polite">0 de 4 ingredientes separados</div>
+                <button class="reset-button" type="button">Desmarcar todos</button>
+            </section>
+
+            <h3>Modo de preparo</h3>
+            <p>
+                Prepare os morangos
+                Lave bem os morangos e seque completamente.
+                Espete cada morango em um palito.
+            </p>
+            <p>
+                Faça o brigadeiro branco
+                Em uma panela, misture o leite condensado, a manteiga e o leite em pó.
+                Cozinhe em fogo baixo, mexendo sempre, até desgrudar do fundo da panela.
+                Deixe esfriar completamente.
+            </p>
+            <p>
+                Envolva os morangos
+                Com as mãos levemente untadas, cubra cada morango com uma camada fina de
+                brigadeiro branco.
+                Coloque sobre papel-manteiga e leve à geladeira por cerca de 20 minutos.
+            </p>
+            <p>
+                Prepare a calda
+                Misture açúcar, água, vinagre e algumas gotas de corante vermelho.
+                Cozinhe sem mexer até atingir o ponto de bala dura (aproximadamente 145–150°C).
+                Se não tiver termômetro, pingue um pouco da calda em água fria: ela deve
+                endurecer imediatamente e quebrar ao morder.
+            </p>
+            <p>
+                Banhe os morangos
+                Mergulhe rapidamente cada morango na calda.
+                Escorra o excesso e coloque sobre papel-manteiga untado ou tapete de silicone.
+            </p>
+            <p>
+                Espere secar
+                Em poucos minutos a casquinha ficará dura e brilhante.
+            </p>
+            <h3>Dicas importantes</h3>
+            <ul class="preparation-list">
+                <li>Os morangos precisam estar totalmente secos, senão a calda pode não aderir.</li>
+                <li>Trabalhe rápido após a calda atingir o ponto.</li>
+                <li>Evite guardar na geladeira por muito tempo, pois a umidade pode amolecer a casquinha.</li>
+            </ul>
+        </article>
+    </main>
+
+    <footer class="site-footer">
+        <p>Feito com carinho no Mundo dos Doces 🍰</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll(".ingredients").forEach(function (section) {
+            const checkboxes = section.querySelectorAll('.ingredient-list input[type="checkbox"]');
+            const progress = section.querySelector(".ingredient-progress");
+            const resetButton = section.querySelector(".reset-button");
+
+            function updateProgress() {
+                const total = checkboxes.length;
+                const checked = section.querySelectorAll('.ingredient-list input[type="checkbox"]:checked').length;
+
+                progress.textContent = checked + " de " + total + " ingredientes separados";
+                progress.classList.toggle("is-complete", total > 0 && checked === total);
+            }
+
+            checkboxes.forEach(function (checkbox) {
+                checkbox.addEventListener("change", function () {
+                    checkbox.closest("label").classList.toggle("is-checked", checkbox.checked);
+                    updateProgress();
+                });
+            });
+
+            resetButton.addEventListener("click", function () {
+                checkboxes.forEach(function (checkbox) {
+                    checkbox.checked = false;
+                    checkbox.closest("label").classList.remove("is-checked");
+                });
+
+                updateProgress();
+            });
+
+            updateProgress();
+        });
+    </script>
 </body>
 </html>

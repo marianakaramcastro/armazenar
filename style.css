@@ -110,7 +110,9 @@ h3 {
 .preto,
 .vermelho,
 .bege,
-.verde {
+.verde
+.prata
+.dourado{
     width: 55%;
     height: auto;
     border-radius: 12px;
@@ -317,7 +319,9 @@ input:focus-visible {
     .preto,
     .vermelho,
     .bege,
-    .verde {
+    .verde
+    .dourado
+    .prata{
         width: 90%;
     }
 

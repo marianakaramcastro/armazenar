@@ -1,32 +1,360 @@
+{
+    box-sizing: border-box;
+}
+
 body {
+    margin: 0;
+    padding: 20px;
     background-color: rgb(184, 174, 255);
+    color: #352d48;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    line-height: 1.6;
+}
+
+/* Títulos */
+
+h1 {
+    color: rgb(63, 51, 96);
+    font-style: italic;
+    margin: 24px 0 16px;
+}
+
+h2 {
+    color: rgb(63, 51, 96);
+    margin-top: 30px;
+}
+
+h3 {
+    color: #51416e;
+    margin-top: 22px;
+}
+
+/* Cabeçalho e link */
+
+.site-header {
+    margin: -20px -20px 24px;
+    padding: 18px;
+    background-color: #d9d1ff;
+    border-bottom: 2px solid #a99be9;
+}
+
+.site-header a {
+    color: rgb(63, 51, 96);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.site-header a:hover {
+    text-decoration: underline;
+}
+
+/* Introdução */
+
+.intro {
+    max-width: 850px;
+    margin: 0 auto 30px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.55);
+    border-radius: 16px;
+}
+
+.intro p {
+    margin-bottom: 0;
+}
+
+/* Área principal */
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.section-title {
+    margin-bottom: 28px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgba(63, 51, 96, 0.25);
+}
+
+/* Cartões de receitas */
+
+.recipe-card {
+    max-width: 850px;
+    margin: 0 auto 30px;
+    padding: 22px;
+    background-color: rgba(255, 255, 255, 0.72);
+    border: 1px solid rgba(91, 73, 133, 0.18);
+    border-radius: 18px;
+    box-shadow: 0 4px 12px rgba(63, 51, 96, 0.10);
+    text-align: center;
+    overflow-wrap: anywhere;
+}
+
+.recipe-card > h2 {
+    margin-top: 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(63, 51, 96, 0.18);
+}
+
+.recipe-card p {
+    white-space: pre-line;
+}
+
+/* Imagens
+   Preserva as classes do CSS original */
+
+.amarelo,
+.azul,
+.roxo,
+.branco,
+.preto,
+.vermelho,
+.bege,
+.verde {
+    width: 55%;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.recipe-card img {
+    display: block;
+    max-width: 100%;
+    max-height: 380px;
+    margin: 15px auto 22px;
+}
+
+/* Caixas de ingredientes */
+
+.ingredients {
+    margin: 22px 0;
+    padding: 18px;
+    background-color: rgba(238, 233, 255, 0.9);
+    border: 1px solid #c7baf5;
+    border-radius: 14px;
+    text-align: left;
+}
+
+.ingredients h3 {
+    margin-top: 0;
     text-align: center;
 }
-h1{
-    color: rgb(63, 51, 96); 
-    font-style:italic ;
+
+.ingredients h3:not(:first-child) {
+    margin-top: 24px;
 }
-.amarelo{
-    width:55%;
+
+/* Listas */
+
+.ingredient-list,
+.preparation-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
-.azul{
-    width:55%;
+
+.ingredient-list li {
+    border-bottom: 1px solid rgba(91, 73, 133, 0.12);
 }
-.roxo{
-    width:55%;
+
+.ingredient-list li:last-child {
+    border-bottom: none;
 }
-.branco{
-    width:55%;
+
+/* Ingredientes clicáveis */
+
+.ingredient-list label {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    min-height: 48px;
+    padding: 12px 10px;
+    border-radius: 8px;
+    color: #352d48;
+    cursor: pointer;
+    line-height: 1.5;
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
-.preto{
-    width:55%;
+
+.ingredient-list label:hover {
+    background-color: rgba(184, 174, 255, 0.22);
 }
-.vermelho{
-    width:55%;
+
+/* Caixas de seleção */
+
+.ingredient-list input[type="checkbox"] {
+    flex: 0 0 auto;
+    width: 21px;
+    height: 21px;
+    margin: 2px 0 0;
+    accent-color: #6551a5;
+    cursor: pointer;
 }
-.bege{
-    width:55%;
+
+/* Ingredientes já separados */
+
+.ingredient-list label.is-checked {
+    color: #777083;
+    background-color: #e4f1e5;
+    text-decoration: line-through;
+    text-decoration-color: #777083;
 }
-.verde{
-    width:55%;
+
+.ingredient-list label.is-checked input[type="checkbox"] {
+    accent-color: #438353;
+}
+
+/* Progresso da lista */
+
+.ingredient-progress {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #ded7ff;
+    border-radius: 8px;
+    color: rgb(63, 51, 96);
+    font-size: 0.95rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.ingredient-progress.is-complete {
+    background-color: #d8eedb;
+    color: #28643a;
+}
+
+/* Botão Desmarcar todos */
+
+.reset-button {
+    display: block;
+    width: 100%;
+    min-height: 46px;
+    margin-top: 12px;
+    padding: 10px 16px;
+    background-color: #6551a5;
+    color: #ffffff;
+    border: 1px solid #6551a5;
+    border-radius: 9px;
+    font-size: 0.95rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.reset-button:hover {
+    background-color: rgb(63, 51, 96);
+}
+
+.reset-button:active {
+    transform: scale(0.99);
+}
+
+/* Modo de preparo */
+
+.preparation-list {
+    padding-left: 22px;
+    list-style: disc;
+    text-align: left;
+}
+
+.preparation-list li {
+    margin-bottom: 10px;
+}
+
+.recipe-note {
+    padding: 12px;
+    background-color: #fff6d9;
+    border-left: 4px solid #d4b55b;
+    border-radius: 6px;
+    text-align: left;
+}
+
+/* Foco acessível pelo teclado */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+    outline: 3px solid #49377f;
+    outline-offset: 3px;
+}
+
+/* Rodapé */
+
+.site-footer {
+    margin: 30px -20px -20px;
+    padding: 18px;
+    background-color: #d9d1ff;
+    border-top: 2px solid #a99be9;
+    color: rgb(63, 51, 96);
+}
+
+/* Adaptação para celulares */
+
+@media (max-width: 600px) {
+    body {
+        padding: 12px;
+        font-size: 15px;
+    }
+
+    .site-header {
+        margin: -12px -12px 20px;
+        padding: 16px 10px;
+    }
+
+    .recipe-card {
+        padding: 16px 12px;
+        margin-bottom: 20px;
+        border-radius: 14px;
+    }
+
+    .intro {
+        padding: 16px;
+    }
+
+    .amarelo,
+    .azul,
+    .roxo,
+    .branco,
+    .preto,
+    .vermelho,
+    .bege,
+    .verde {
+        width: 90%;
+    }
+
+    .recipe-card img {
+        max-height: 300px;
+    }
+
+    .ingredients {
+        padding: 12px 9px;
+    }
+
+    .ingredient-list label {
+        gap: 10px;
+        padding: 13px 7px;
+    }
+
+    .ingredient-list input[type="checkbox"] {
+        width: 22px;
+        height: 22px;
+    }
+
+    .reset-button {
+        min-height: 48px;
+    }
+
+    .site-footer {
+        margin: 24px -12px -12px;
+    }
+}
+
+/* Respeita a preferência por menos animações */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
 }
